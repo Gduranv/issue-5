@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Thomsom</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand mx-2" href="#">Thomson</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <form class="form-inline my-2 my-lg-0">
+                <div class="input-group">
+                    <input name="search" id="search" class="form-control mr-sm-2" type="search" placeholder="Buscar" aria-label="Search">
+                    <div class="input-group-append">
+                        <button class="btn btn-warning mx-2 my-2 my-sm-0" type="submit">Buscar</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="row p-4">
+          <div class="col-md-5">
+            <div class="card">
+              <div class="card-body">
+                <form id="task-form">
+                  <div class="form-group">
+                    <input type="text" id="cantidad" placeholder="Cantidad de botellones" class="form-control my-2">
+                  </div>
+                  <div class="form-group">
+                    <textarea id="descripcion" cols="30" rows="10" class="form-control" placeholder="Descripcion"></textarea>
+                  </div>
+                  <input type="hidden" id="taskId">
+                  <button type="submit" class="btn btn-success btn-block text-center my-2">
+                    Guardar pedido
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-7">
+            <div class="card my-4" id="task-result">
+              <div class="card-body">
+                <ul id="container"></ul>
+              </div>
+            </div>
+  
+            <table class="table table-primary table-bordered table-sm">
+              <thead>
+                <tr>
+                  <td>Id</td>
+                  <td>Cantidad</td>
+                  <td>Fecha y hora</td>
+                  <td>Descripcion</td>
+                </tr>
+              </thead>
+              <tbody id="pedidos"></tbody>
+            </table>
+          </div>
+        </div>
+      </div>  
+      <div class="text-center mt-4">
+        <button id="download-pdf" class="btn btn-warning">Descargar PDF</button>
+      </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.4.1/jspdf.debug.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>  
+    <script src="script.js"></script>
+</body>
+</html>
